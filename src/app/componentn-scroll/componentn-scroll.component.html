@@ -1,0 +1,28 @@
+<div class="scroll-container">
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Scroll App</h1>
+    </header>
+  
+    <!-- Virtual Scroll Section -->
+    <cdk-virtual-scroll-viewport itemSize="72" class="viewport" (scrolledIndexChange)="currentIndex($event)">
+      <ul>
+        <ng-container *cdkVirtualFor="let pokemon of pokemons$ | async; trackBy: trackByFn">
+          <li class="list-item">
+            <img [src]="pokemon.ThumbnailImage" [alt]="pokemon.ThumbnailAltText" [title]="pokemon.name">
+            <h3>{{ pokemon.name }}</h3>
+            <p>
+              <span>{{ pokemon.number }}</span>
+              <span class="type"> -- {{ pokemon.type.join(', ') }}</span>
+            </p>
+          </li>
+        </ng-container>
+      </ul>
+    </cdk-virtual-scroll-viewport>
+  
+    <!-- Button to Scroll to Random Pokémon -->
+    <div class="button-container">
+      <button (click)="scrollToIndex()">Scroll to Random Pokémon</button>
+    </div>
+  </div>
+  

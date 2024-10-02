@@ -1,0 +1,134 @@
+/* Overall container styles */
+.scroll-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  .header {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  /* Virtual Scroll Viewport */
+  .viewport {
+    height: 500px;
+    width: 80%;
+    border: 1px solid #ccc;
+    overflow: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.2em;
+    flex-grow: 1;
+  }
+  
+  .type {
+    font-size: 0.9em;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  /* Button Styles */
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .viewport {
+      width: 100%;
+      height: 400px;
+    }
+  
+    .list-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+  
+    .type {
+      font-size: 0.8em;
+    }
+  
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1.1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .viewport {
+      height: 300px;
+    }
+  
+    .header h1 {
+      font-size: 1.5em;
+    }
+  }
+  

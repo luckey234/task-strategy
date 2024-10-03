@@ -42,20 +42,6 @@ This project demonstrates virtual scrolling in Angular, handling 10,000 Pokémon
 - Simulated slow network data loading
 - Random scrolling to any Pokémon in the list
 
-## Setup
-
-1. Clone the repository:
-
-
-
-2. Install dependencies:
-
-
-3. Run the application:
-
-
-4. Open in the browser:
-
 
 ## Future Improvements
 - Add unit tests.
